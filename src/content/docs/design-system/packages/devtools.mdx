@@ -1,0 +1,39 @@
+---
+title: devtools
+description: Development-only design system toolbar for Next.js apps.
+---
+
+# @manovaspace/devtools
+
+Development-only toolbar for editing design tokens and previewing theme changes. **Do not import in production bundles.**
+
+## Install
+
+```bash
+npm install -D @manovaspace/devtools
+```
+
+Requires `@manovaspace/tokens` and `@manovaspace/ui`.
+
+## Usage
+
+```tsx
+import { OrbitDevtools } from "@manovaspace/devtools";
+```
+
+```css
+@import "@manovaspace/devtools/styles.css";
+```
+
+## Exports
+
+| Import | Purpose |
+| --- | --- |
+| `@manovaspace/devtools` | Main devtools panel |
+| `@manovaspace/devtools/slot` | Slot for toolbar injection |
+| `@manovaspace/devtools/next` | Next.js theme route helper |
+| `@manovaspace/devtools/styles.css` | Devtools stylesheet |
+
+## Source
+
+[github.com/manovaspace/design-system/tree/main/packages/devtools](https://github.com/manovaspace/design-system/tree/main/packages/devtools)

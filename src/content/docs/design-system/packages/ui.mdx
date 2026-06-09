@@ -1,0 +1,45 @@
+---
+title: ui
+description: Radix and Tailwind component primitives with motion and icons.
+---
+
+# @manovaspace/ui
+
+MIT-licensed design system layer: Radix primitives, Tailwind 4 styles, motion helpers, loading states, and icon packs.
+
+## Install
+
+```bash
+npm install @manovaspace/ui @manovaspace/tokens
+```
+
+Peer dependencies: `react` and `react-dom` ^19.2.
+
+## Styles and components
+
+```css
+@import "@manovaspace/tokens/tokens.css";
+```
+
+```tsx
+import "@manovaspace/ui/styles.css";
+import { Button, Card, Dialog } from "@manovaspace/ui";
+```
+
+## Subpath exports
+
+| Import | Purpose |
+| --- | --- |
+| `@manovaspace/ui` | Components and providers |
+| `@manovaspace/ui/styles.css` | Built Tailwind stylesheet |
+| `@manovaspace/ui/motion` | Framer Motion wrappers and tokens |
+| `@manovaspace/ui/loading` | Loading overlays and hooks |
+| `@manovaspace/ui/server` | Next.js head helpers for fonts/tokens |
+
+## Storybook
+
+Browse components locally — see [Storybook](/design-system/storybook/).
+
+## Source
+
+[github.com/manovaspace/design-system/tree/main/packages/ui](https://github.com/manovaspace/design-system/tree/main/packages/ui)

@@ -1,0 +1,58 @@
+---
+title: Contributing
+description: How to contribute to manovaspace open commons.
+---
+
+# Contributing
+
+Thanks for improving `@manovaspace/*`. These are MIT open commons — no Orbit platform or client business logic.
+
+## Which repo?
+
+| Change | Repo |
+| --- | --- |
+| tsconfig, markdown, pwa, observability | [manovaspace/ts](https://github.com/manovaspace/ts) |
+| tokens, ui, devtools | [manovaspace/design-system](https://github.com/manovaspace/design-system) |
+| Documentation (this site) | [manovaspace/docs](https://github.com/manovaspace/docs) |
+
+## Before you open a PR
+
+1. **Scope** — No `@orbit/*` imports, no `Orbit`-prefixed public APIs, no client names or internal URLs.
+2. **Changeset** — Package changes that should ship to npm need a changeset in the package repo.
+3. **Docs** — User-facing API changes should include a docs PR here (or in the same PR if you have access to both repos).
+
+## Development (package repos)
+
+```bash
+pnpm install
+pnpm build
+pnpm test
+pnpm typecheck
+pnpm lint
+```
+
+## Changesets (package repos)
+
+```bash
+pnpm changeset
+```
+
+Pick affected packages and semver bump type. Commit the generated `.changeset/*.md` with your PR.
+
+Maintainers release via each repo's `RELEASING.md`:
+
+- [ts RELEASING.md](https://github.com/manovaspace/ts/blob/main/RELEASING.md)
+- [design-system RELEASING.md](https://github.com/manovaspace/design-system/blob/main/RELEASING.md)
+
+## Documentation site
+
+```bash
+cd manovaspace/docs
+pnpm install
+pnpm dev
+pnpm build
+```
+
+## Questions
+
+Open a [GitHub issue](https://github.com/manovaspace/docs/issues) or the relevant package repo.
