@@ -10,8 +10,7 @@ export default defineConfig({
 			title: "manovaspace docs",
 			tagline: "MIT open commons — @manovaspace/* on npm",
 			editLink: {
-				baseUrl:
-					"https://github.com/manovaspace/docs/edit/main/src/content/docs/",
+				baseUrl: "https://github.com/manovaspace/docs/edit/main/",
 			},
 			social: [
 				{
