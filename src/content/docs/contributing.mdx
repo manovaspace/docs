@@ -17,7 +17,7 @@ Thanks for improving `@manovaspace/*`. These are MIT open commons — no Orbit p
 
 ## Before you open a PR
 
-1. **Scope** — No `@orbit/*` imports, no `Orbit`-prefixed public APIs, no client names or internal URLs.
+1. **Scope** — No `@orbit/*` imports, no new `Orbit`-prefixed **package names**, no client names or internal URLs. Legacy type names (`OrbitTokensRaw`, `OrbitDevtoolsProvider`, etc.) remain until a rename release.
 2. **Changeset** — Package changes that should ship to npm need a changeset in the package repo.
 3. **Docs** — User-facing API changes should include a docs PR here (or in the same PR if you have access to both repos).
 
@@ -46,11 +46,13 @@ Maintainers release via each repo's `RELEASING.md`:
 
 ## Documentation site
 
+This repo uses **npm** (single Starlight app, no pnpm workspace).
+
 ```bash
 cd manovaspace/docs
-pnpm install
-pnpm dev
-pnpm build
+npm install
+npm run dev
+npm run build
 ```
 
 ## Questions
