@@ -15,6 +15,7 @@
 | **URL** | `https://manovaspace.github.io/docs/` |
 | **Generator** | Astro Starlight (`base: /docs`) |
 | **Legacy URLs** | `/ts/` and `/design-system/` redirect to `/docs/...` |
+| **Package manager** | **npm** for this repo (single app; no pnpm workspace) |
 
 ## Rationale
 
@@ -22,6 +23,6 @@
 - Package repos focus on code and npm releases
 - Starlight retained — team familiarity, low migration cost
 
-Staff planning: Manova workspace [`docs/manovaspace/DOCUMENTATION-SITE.md`](https://github.com/manovaspace/docs/blob/main/meta/DOCUMENTATION-SITE.md) *(mirror in meta/ — not published)*.
+Staff planning (canonical, Manova workspace only): `docs/manovaspace/DOCUMENTATION-SITE.md`. This `meta/` copy is a public mirror — not the source of truth.
 
-**MS-FT-011:** in progress — unified site at [manovaspace.github.io/docs](https://manovaspace.github.io/docs/).
+**MS-FT-011:** **done** — live at [manovaspace.github.io/docs](https://manovaspace.github.io/docs/).
