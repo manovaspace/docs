@@ -8,7 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "manovaspace docs",
-			tagline: "MIT open commons — @manovaspace/* on npm",
+			tagline: "MIT TypeScript libraries for Next.js",
 			editLink: {
 				baseUrl: "https://github.com/manovaspace/docs/edit/main/",
 			},
@@ -30,6 +30,7 @@ export default defineConfig({
 				{
 					label: "Utilities",
 					items: [
+						{ label: "Overview", slug: "utilities" },
 						{ label: "Getting started", slug: "utilities/getting-started" },
 						{ label: "tsconfig", slug: "utilities/packages/tsconfig" },
 						{ label: "markdown", slug: "utilities/packages/markdown" },
@@ -43,16 +44,18 @@ export default defineConfig({
 				{
 					label: "Design system",
 					items: [
+						{ label: "Overview", slug: "design-system" },
 						{
 							label: "Getting started",
 							slug: "design-system/getting-started",
 						},
 						{ label: "Storybook", slug: "design-system/storybook" },
-						{ label: "tokens", slug: "design-system/packages/tokens" },
-						{ label: "ui", slug: "design-system/packages/ui" },
-						{ label: "devtools", slug: "design-system/packages/devtools" },
+						{ label: "Tokens", slug: "design-system/packages/tokens" },
+						{ label: "UI components", slug: "design-system/packages/ui" },
+						{ label: "Devtools", slug: "design-system/packages/devtools" },
 					],
 				},
+				{ label: "Compatibility", slug: "compatibility" },
 				{ label: "Contributing", slug: "contributing" },
 			],
 		}),

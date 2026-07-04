@@ -1,6 +1,8 @@
 # manovaspace/docs
 
-Public documentation site for `@manovaspace/*` open commons.
+Public documentation site for `@manovaspace/*` MIT TypeScript libraries.
+
+**Naming:** Public copy uses **manovaspace** only. Orbit is Manova-team/staff (`orbit-docs`). Document `Orbit*` TypeScript exports as legacy identifiers, not product brand.
 
 ## Scope
 
