@@ -1,41 +1,47 @@
 ---
 title: Getting started
-description: Install and use @manovaspace/tokens and @manovaspace/ui in a Next.js app.
+description: Install tokens and UI, then render a first component.
 ---
-
-# Design system — getting started
 
 ## Install
 
 ```bash
-npm install @manovaspace/tokens @manovaspace/ui
+pnpm add @manovaspace/tokens @manovaspace/ui
 ```
 
-Peer dependencies: `react` and `react-dom` ^19.2.
+Peer dependencies: `react` and `react-dom` ^19.2. Also works with npm or yarn.
 
 ## Styles
 
+In your global CSS:
+
 ```css
+@import "@manovaspace/tokens/fonts.css";
 @import "@manovaspace/tokens/tokens.css";
 ```
 
 ```tsx
 import "@manovaspace/ui/styles.css";
+```
+
+## Hello world
+
+```tsx
 import { Button } from "@manovaspace/ui";
+
+export function Example() {
+  return <Button>Get started</Button>;
+}
 ```
 
-## Storybook
+## Next steps
 
-Component gallery runs from the design-system monorepo — see [Storybook](/docs/design-system/storybook/).
+- [Tokens](/docs/design-system/packages/tokens/) — CSS variables and fonts
+- [UI components](/docs/design-system/packages/ui/) — primitives, motion, icons
+- [Storybook](/docs/design-system/storybook/) — browse components locally (port 10006)
+- [Devtools](/docs/design-system/packages/devtools/) — optional **development-only** toolbar
 
-## Devtools (development only)
+## Related
 
-```bash
-npm install -D @manovaspace/devtools
-```
-
-See [devtools](/docs/design-system/packages/devtools/).
-
-## Utility packages
-
-TypeScript utilities (`tsconfig`, `markdown`, `pwa`, `observability`) are in the [utilities section](/docs/utilities/getting-started/).
+- [Design system overview](/docs/design-system/)
+- [Compatibility](/docs/compatibility/)

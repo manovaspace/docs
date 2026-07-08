@@ -1,33 +1,54 @@
 ---
 title: "@manovaspace/tokens"
-description: Design tokens — default.json, semantic CSS, and font assets.
+description: Design tokens — CSS variables, fonts, and default.json for the UI layer.
 ---
 
-# @manovaspace/tokens
-
-Design tokens for the manovaspace UI layer: default token JSON, generated CSS variables, and font assets used by `@manovaspace/ui`.
+Token JSON, generated CSS variables, and font assets used by [`@manovaspace/ui`](/docs/design-system/packages/ui/).
 
 ## Install
 
 ```bash
-npm install @manovaspace/tokens
+pnpm add @manovaspace/tokens
 ```
+
+Also works with npm or yarn.
 
 ## CSS
 
 ```css
-@import "@manovaspace/tokens/tokens.css";
 @import "@manovaspace/tokens/fonts.css";
+@import "@manovaspace/tokens/tokens.css";
 ```
+
+Semantic CSS variables power theming (background, foreground, primary, muted, border, and color families with steps **50 → 950**).
+
+## Runtime helpers
+
+```ts
+import {
+  defaultTokensRaw,
+  resolveTokens,
+  applyTokens,
+} from "@manovaspace/tokens";
+```
+
+Use `TokenProvider` from `@manovaspace/ui` for React apps that merge defaults with overrides.
+
+:::note[Legacy identifiers]
+Some TypeScript types still use `Orbit*` names (for example `OrbitTokensRaw`). The npm package is `@manovaspace/tokens`.
+:::
 
 ## Exports
 
 | Import | Purpose |
 | --- | --- |
-| `@manovaspace/tokens` | Token types and runtime helpers |
+| `@manovaspace/tokens` | Types, `defaultTokensRaw`, resolve/apply helpers |
 | `@manovaspace/tokens/tokens.css` | Semantic CSS variables |
-| `@manovaspace/tokens/fonts.css` | Font face declarations |
+| `@manovaspace/tokens/fonts.css` | Font faces |
 
-## Source
+## Related
 
-[github.com/manovaspace/design-system/tree/main/packages/tokens](https://github.com/manovaspace/design-system/tree/main/packages/tokens)
+- [UI components](/docs/design-system/packages/ui/)
+- [Getting started](/docs/design-system/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/tokens)
+- [Source](https://github.com/manovaspace/design-system/tree/main/packages/tokens)

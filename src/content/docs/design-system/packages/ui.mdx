@@ -3,43 +3,74 @@ title: "@manovaspace/ui"
 description: Radix and Tailwind component primitives with motion and icons.
 ---
 
-# @manovaspace/ui
-
-MIT-licensed design system layer: Radix primitives, Tailwind 4 styles, motion helpers, loading states, and icon packs.
+Radix-based primitives styled with Tailwind 4, plus motion helpers, loading states, and icon packs. Pair with [`@manovaspace/tokens`](/docs/design-system/packages/tokens/).
 
 ## Install
 
 ```bash
-npm install @manovaspace/ui @manovaspace/tokens
+pnpm add @manovaspace/ui @manovaspace/tokens
 ```
 
-Peer dependencies: `react` and `react-dom` ^19.2.
+Peers: `react` and `react-dom` ^19.2. Also works with npm or yarn.
 
-## Styles and components
+## Usage
 
 ```css
+@import "@manovaspace/tokens/fonts.css";
 @import "@manovaspace/tokens/tokens.css";
 ```
 
 ```tsx
 import "@manovaspace/ui/styles.css";
-import { Button, Card, Dialog } from "@manovaspace/ui";
+import { Button, Card, CardContent, CardHeader, CardTitle } from "@manovaspace/ui";
+
+export function Example() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Welcome</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <Button>Continue</Button>
+      </CardContent>
+    </Card>
+  );
+}
 ```
+
+## Components (root export)
+
+Common primitives from `@manovaspace/ui`:
+
+| Group | Exports |
+| --- | --- |
+| Actions | `Button`, `Toggle`, `ToggleGroup` |
+| Inputs | `Input`, `Textarea`, `Checkbox`, `Switch`, `Slider`, `Select`, `Label` |
+| Layout | `Card`, `PageShell`, `Tabs`, `Collapsible`, `ScrollArea`, `Separator`-style surfaces |
+| Feedback | `Badge`, `Progress`, `Skeleton`, `Spinner`, `Dialog` |
+| Media | `Avatar`, `ColorSwatch` |
+| Theme | `ThemeProvider`, `ThemeSwitcher`, `ThemeColorSync`, `TokenProvider`, `DirectionProvider` |
+
+Also: `cn` utility, icon helpers (`ICON_SIZES`, `iconProps`), and `WhatsNew`.
 
 ## Subpath exports
 
 | Import | Purpose |
 | --- | --- |
 | `@manovaspace/ui` | Components and providers |
-| `@manovaspace/ui/styles.css` | Built Tailwind stylesheet |
-| `@manovaspace/ui/motion` | Framer Motion wrappers and tokens |
-| `@manovaspace/ui/loading` | Loading overlays and hooks |
-| `@manovaspace/ui/server` | Next.js head helpers for fonts/tokens |
+| `@manovaspace/ui/styles.css` | Built stylesheet (required) |
+| `@manovaspace/ui/motion` | Motion wrappers (`FadeIn`, `SlideUp`, …) |
+| `@manovaspace/ui/loading` | Loading overlay / screen helpers |
+| `@manovaspace/ui/icons` | Lucide-style UI icons |
+| `@manovaspace/ui/icons/solid` | Solid icon set |
+| `@manovaspace/ui/icons/brand` | Brand icons |
+| `@manovaspace/ui/server` | Head helpers for fonts/tokens in Next.js |
 
-## Storybook
+Browse interactive examples in [Storybook](/docs/design-system/storybook/).
 
-Browse components locally — see [Storybook](/docs/design-system/storybook/).
+## Related
 
-## Source
-
-[github.com/manovaspace/design-system/tree/main/packages/ui](https://github.com/manovaspace/design-system/tree/main/packages/ui)
+- [Tokens](/docs/design-system/packages/tokens/)
+- [Getting started](/docs/design-system/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/ui)
+- [Source](https://github.com/manovaspace/design-system/tree/main/packages/ui)
