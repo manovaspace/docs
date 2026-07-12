@@ -1,11 +1,9 @@
 ---
 title: "@manovaspace/observability"
-description: Next.js instrumentation helpers for Sentry and optional OpenTelemetry.
+description: Next.js instrumentation helpers for Sentry.
 ---
 
-# @manovaspace/observability
-
-Next.js instrumentation helpers for Sentry. Thin glue for `instrumentation.ts` — no log pipeline in the browser. `@sentry/nextjs` is optional; no-ops when DSN is unset.
+Thin glue for Next.js `instrumentation.ts` with Sentry. `@sentry/nextjs` is optional — helpers no-op when a DSN is unset.
 
 ## Install
 
@@ -13,7 +11,7 @@ Next.js instrumentation helpers for Sentry. Thin glue for `instrumentation.ts` �
 pnpm add @manovaspace/observability
 ```
 
-Peer dependencies: `next`. Optional: `@sentry/nextjs`.
+Peers: `next`. Optional: `@sentry/nextjs`. Also works with npm or yarn.
 
 ## Usage
 
@@ -42,3 +40,10 @@ NEXT_PUBLIC_SENTRY_DSN=https://…@sentry.example/…
 | --- | --- |
 | `registerNextInstrumentation` | Call from Next.js `instrumentation.ts` (nodejs runtime) |
 | `initObservability` | Lower-level init from `@manovaspace/observability` |
+
+## Related
+
+- [Utilities overview](/docs/utilities/)
+- [Getting started](/docs/utilities/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/observability)
+- [Source](https://github.com/manovaspace/ts/tree/main/packages/observability)

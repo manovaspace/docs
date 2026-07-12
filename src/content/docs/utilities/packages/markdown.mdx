@@ -3,9 +3,7 @@ title: "@manovaspace/markdown"
 description: Lightweight GFM markdown renderer for React and Next.js.
 ---
 
-# @manovaspace/markdown
-
-Lightweight GFM markdown renderer for React and Next.js. Renders GFM with typography utility classes — bring your own Tailwind theme; no CSS bundle shipped.
+Renders GitHub-Flavored Markdown with typography utility classes. Bring your own Tailwind theme — no CSS bundle ships with the package.
 
 ## Install
 
@@ -13,7 +11,7 @@ Lightweight GFM markdown renderer for React and Next.js. Renders GFM with typogr
 pnpm add @manovaspace/markdown
 ```
 
-Peer dependencies: `react`, `react-dom`.
+Peers: `react`, `react-dom`. Also works with npm or yarn.
 
 ## Usage
 
@@ -31,5 +29,12 @@ Works in Server and Client Components.
 
 | Export | Description |
 | --- | --- |
-| `MarkdownContent` | Renders markdown string children with GFM + styled elements |
-| `MarkdownContentProps` | `children: string` |
+| `MarkdownContent` | Renders markdown string children with GFM |
+| `MarkdownContentProps` | `{ children: string }` |
+
+## Related
+
+- [Utilities overview](/docs/utilities/)
+- [Getting started](/docs/utilities/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/markdown)
+- [Source](https://github.com/manovaspace/ts/tree/main/packages/markdown)
