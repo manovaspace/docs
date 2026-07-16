@@ -23,6 +23,6 @@
 - Package repos focus on code and npm releases
 - Starlight retained — team familiarity, low migration cost
 
-Staff planning (canonical, Manova workspace only): `docs/manovaspace/DOCUMENTATION-SITE.md`. This `meta/` copy is a public mirror — not the source of truth.
+This `meta/` folder records public documentation decisions for the manovaspace org. It is not published to the Starlight site.
 
 **MS-FT-011:** **done** — live at [manovaspace.github.io/docs](https://manovaspace.github.io/docs/).
