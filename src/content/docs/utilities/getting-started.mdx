@@ -1,13 +1,11 @@
 ---
 title: Getting started
-description: Install @manovaspace utility packages from npm and use them in Next.js apps.
+description: Install @manovaspace utility packages from npm.
 ---
 
-# Utilities — getting started
+`@manovaspace/*` resolves from [registry.npmjs.org](https://registry.npmjs.org). No special `.npmrc` is required for these packages.
 
-## Install from npm
-
-`@manovaspace/*` resolves from [registry.npmjs.org](https://registry.npmjs.org). No special `.npmrc` scope is required.
+## Install
 
 ```bash
 pnpm add -D @manovaspace/tsconfig
@@ -16,32 +14,23 @@ pnpm add @manovaspace/pwa
 pnpm add @manovaspace/observability
 ```
 
-## TypeScript
+Also works with npm or yarn — examples use **pnpm**.
 
-Extend shared presets in `tsconfig.json` — see [tsconfig](/docs/utilities/packages/tsconfig/).
-
-## Next.js apps
+## What to use
 
 | Need | Package |
 | --- | --- |
-| Blog / markdown content | [markdown](/docs/utilities/packages/markdown/) |
+| Shared TypeScript presets | [tsconfig](/docs/utilities/packages/tsconfig/) |
+| GFM markdown in React | [markdown](/docs/utilities/packages/markdown/) |
 | PWA / offline | [pwa](/docs/utilities/packages/pwa/) |
-| Sentry instrumentation | [observability](/docs/utilities/packages/observability/) |
+| Sentry via `instrumentation.ts` | [observability](/docs/utilities/packages/observability/) |
 
 ## Design system
 
-Tokens, UI, and devtools are documented in the [design system section](/docs/design-system/getting-started/).
+Tokens and UI components live under [Design system](/docs/design-system/getting-started/).
 
-## Manova staff notes
+## Related
 
-Sibling repos in the Manova workspace may use `link:` paths during co-development. Published semver pins are used for CI and external consumers.
-
-If you also use private `@orbit/*` packages from Verdaccio, keep that registry **scoped only** (do not set a global Verdaccio registry):
-
-```ini
-@orbit:registry=https://npm.dev.manova.space
-```
-
-## Contributing
-
-See [Contributing](/docs/contributing/) and [RELEASING.md](https://github.com/manovaspace/ts/blob/main/RELEASING.md) on GitHub.
+- [Utilities overview](/docs/utilities/)
+- [Compatibility](/docs/compatibility/)
+- [Contributing](/docs/contributing/)

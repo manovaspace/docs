@@ -1,50 +1,63 @@
 ---
 title: manovaspace
-description: MIT TypeScript open commons published as @manovaspace/* on npm.
+description: MIT TypeScript libraries for Next.js — utilities and a design system on npm.
 template: splash
 hero:
-  tagline: MIT libraries for Next.js apps — utilities and design system, published on npm.
+  tagline: Shared TypeScript presets, PWA helpers, and a Radix/Tailwind design system — published as @manovaspace/* on npm.
   actions:
-    - text: Utilities
-      link: /docs/utilities/getting-started/
-      icon: right-arrow
     - text: Design system
       link: /docs/design-system/getting-started/
+      icon: right-arrow
+    - text: Utilities
+      link: /docs/utilities/getting-started/
       variant: minimal
 ---
 
-## Packages
+## Who this is for
 
-| npm | Section | Description |
-| --- | --- | --- |
-| [`@manovaspace/tsconfig`](/docs/utilities/packages/tsconfig/) | Utilities | Strict shared TypeScript presets |
-| [`@manovaspace/markdown`](/docs/utilities/packages/markdown/) | Utilities | GFM markdown renderer for React |
-| [`@manovaspace/pwa`](/docs/utilities/packages/pwa/) | Utilities | Serwist and manifest helpers for Next.js |
-| [`@manovaspace/observability`](/docs/utilities/packages/observability/) | Utilities | Next.js instrumentation for Sentry |
-| [`@manovaspace/tokens`](/docs/design-system/packages/tokens/) | Design system | Design tokens, CSS variables, fonts |
-| [`@manovaspace/ui`](/docs/design-system/packages/ui/) | Design system | Radix/Tailwind components and motion |
-| [`@manovaspace/devtools`](/docs/design-system/packages/devtools/) | Design system | Dev-only design system toolbar |
+Teams building **Next.js / React** apps that want reusable MIT packages for TypeScript config, markdown, PWA wiring, and UI primitives — without forking a private toolkit.
 
-## Install
+## Install paths
+
+**Design system** (tokens + components):
+
+```bash
+pnpm add @manovaspace/tokens @manovaspace/ui
+```
+
+**Utilities** (pick what you need):
 
 ```bash
 pnpm add -D @manovaspace/tsconfig
-pnpm add @manovaspace/ui @manovaspace/tokens
+pnpm add @manovaspace/markdown @manovaspace/pwa @manovaspace/observability
 ```
 
-## Source repos
+Also works with npm or yarn.
+
+## Packages
+
+| npm | Section |
+| --- | --- |
+| [`@manovaspace/tsconfig`](/docs/utilities/packages/tsconfig/) | [Utilities](/docs/utilities/) |
+| [`@manovaspace/markdown`](/docs/utilities/packages/markdown/) | [Utilities](/docs/utilities/) |
+| [`@manovaspace/pwa`](/docs/utilities/packages/pwa/) | [Utilities](/docs/utilities/) |
+| [`@manovaspace/observability`](/docs/utilities/packages/observability/) | [Utilities](/docs/utilities/) |
+| [`@manovaspace/tokens`](/docs/design-system/packages/tokens/) | [Design system](/docs/design-system/) |
+| [`@manovaspace/ui`](/docs/design-system/packages/ui/) | [Design system](/docs/design-system/) |
+| [`@manovaspace/devtools`](/docs/design-system/packages/devtools/) | [Design system](/docs/design-system/) |
+
+## Source
 
 | Repo | Contents |
 | --- | --- |
-| [manovaspace/ts](https://github.com/manovaspace/ts) | tsconfig, markdown, pwa, observability |
-| [manovaspace/design-system](https://github.com/manovaspace/design-system) | tokens, ui, devtools, Storybook |
-| [manovaspace/docs](https://github.com/manovaspace/docs) | This documentation site |
+| [manovaspace/ts](https://github.com/manovaspace/ts) | Utilities |
+| [manovaspace/design-system](https://github.com/manovaspace/design-system) | Tokens, UI, devtools, Storybook |
+| [manovaspace/docs](https://github.com/manovaspace/docs) | This site |
 
 ## Links
 
 - [npm org](https://www.npmjs.com/org/manovaspace)
+- [Compatibility](/docs/compatibility/)
 - [Contributing](/docs/contributing/)
 
-## License
-
-MIT — see package repos on GitHub.
+MIT — see each package repository on GitHub.

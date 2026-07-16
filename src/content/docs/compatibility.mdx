@@ -1,0 +1,40 @@
+---
+title: Compatibility
+description: Supported runtimes and peer versions for @manovaspace packages.
+---
+
+Versions below match current package peer ranges. Always check the package’s `package.json` on npm for the latest.
+
+## Shared
+
+| Requirement | Notes |
+| --- | --- |
+| Node.js | **≥ 24** for developing the monorepos; consumers follow their app’s Next.js requirement |
+| Package manager | pnpm recommended; npm and yarn work for installs |
+
+## Design system
+
+| Package | Peers |
+| --- | --- |
+| `@manovaspace/ui` | `react` ^19.2, `react-dom` ^19.2 |
+| `@manovaspace/tokens` | (none) |
+| `@manovaspace/devtools` | `react` ^19.2, `react-dom` ^19.2 (devDependency usage) |
+
+UI styles assume **Tailwind CSS 4** in the consumer app when extending themes.
+
+## Utilities
+
+| Package | Peers |
+| --- | --- |
+| `@manovaspace/tsconfig` | TypeScript (dev) |
+| `@manovaspace/markdown` | `react`, `react-dom` |
+| `@manovaspace/pwa` | `next`, `react`, `react-dom` |
+| `@manovaspace/observability` | `next`; optional `@sentry/nextjs` |
+
+Targeted at **Next.js App Router** apps (currently Next 16 in our templates).
+
+## Related
+
+- [Home](/docs/)
+- [Utilities](/docs/utilities/)
+- [Design system](/docs/design-system/)

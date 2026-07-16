@@ -1,11 +1,9 @@
 ---
 title: Storybook
-description: Run the component gallery locally from manovaspace/design-system.
+description: Run the manovaspace design-system component gallery locally.
 ---
 
-# Storybook
-
-The design system component gallery lives in [`manovaspace/design-system`](https://github.com/manovaspace/design-system), not in this docs repo.
+The component gallery lives in [`manovaspace/design-system`](https://github.com/manovaspace/design-system).
 
 ## Run locally
 
@@ -16,25 +14,14 @@ pnpm install
 pnpm storybook
 ```
 
-Runs on port **10006**.
-
-## Manova workspace
-
-If you have the full Manova workspace:
-
-```bash
-cd manovaspace/design-system
-pnpm storybook
-```
-
-Or from `orbit/orbit-frontend`:
-
-```bash
-pnpm storybook
-```
-
-(Delegates to the design-system repo.)
+Opens on port **10006**.
 
 ## What it covers
 
-Stories for `@manovaspace/ui` primitives, motion, tokens, and theme switching — useful when developing components without a full Next.js app.
+Stories for `@manovaspace/ui` primitives, motion, tokens, and theme switching — useful when iterating on components without a full Next.js app.
+
+## Related
+
+- [UI components](/docs/design-system/packages/ui/)
+- [Design system getting started](/docs/design-system/getting-started/)
+- [Source](https://github.com/manovaspace/design-system/tree/main/apps/storybook)

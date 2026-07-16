@@ -1,11 +1,9 @@
 ---
 title: Contributing
-description: How to contribute to manovaspace open commons.
+description: How to contribute to manovaspace packages and docs.
 ---
 
-# Contributing
-
-Thanks for improving `@manovaspace/*`. These are MIT open commons — no Orbit platform or client business logic.
+Thanks for improving `@manovaspace/*` — MIT TypeScript libraries on [npm](https://www.npmjs.com/org/manovaspace) and [GitHub](https://github.com/manovaspace).
 
 ## Which repo?
 
@@ -13,13 +11,13 @@ Thanks for improving `@manovaspace/*`. These are MIT open commons — no Orbit p
 | --- | --- |
 | tsconfig, markdown, pwa, observability | [manovaspace/ts](https://github.com/manovaspace/ts) |
 | tokens, ui, devtools | [manovaspace/design-system](https://github.com/manovaspace/design-system) |
-| Documentation (this site) | [manovaspace/docs](https://github.com/manovaspace/docs) |
+| This documentation site | [manovaspace/docs](https://github.com/manovaspace/docs) |
 
 ## Before you open a PR
 
-1. **Scope** — No `@orbit/*` imports, no new `Orbit`-prefixed **package names**, no client names or internal URLs. Legacy type names (`OrbitTokensRaw`, `OrbitDevtoolsProvider`, etc.) remain until a rename release.
-2. **Changeset** — Package changes that should ship to npm need a changeset in the package repo.
-3. **Docs** — User-facing API changes should include a docs PR here (or in the same PR if you have access to both repos).
+1. **Scope** — Keep packages generic and reusable. No client product names, private URLs, or new `Orbit`-prefixed **package** names on npm.
+2. **Changeset** — User-facing package changes need a changeset in that package repo.
+3. **Docs** — API changes that affect consumers should update this site (or link a docs PR).
 
 ## Development (package repos)
 
@@ -31,30 +29,31 @@ pnpm typecheck
 pnpm lint
 ```
 
-## Changesets (package repos)
+## Changesets
 
 ```bash
 pnpm changeset
 ```
 
-Pick affected packages and semver bump type. Commit the generated `.changeset/*.md` with your PR.
+Pick affected packages and the semver bump. Commit `.changeset/*.md` with your PR.
 
-Maintainers release via each repo's `RELEASING.md`:
-
-- [ts RELEASING.md](https://github.com/manovaspace/ts/blob/main/RELEASING.md)
-- [design-system RELEASING.md](https://github.com/manovaspace/design-system/blob/main/RELEASING.md)
+Releases: [ts RELEASING.md](https://github.com/manovaspace/ts/blob/main/RELEASING.md) · [design-system RELEASING.md](https://github.com/manovaspace/design-system/blob/main/RELEASING.md)
 
 ## Documentation site
 
 This repo uses **npm** (single Starlight app, no pnpm workspace).
 
 ```bash
-cd manovaspace/docs
+cd manovaspace/docs   # or: git clone https://github.com/manovaspace/docs.git
 npm install
 npm run dev
 npm run build
 ```
 
+## Legacy identifiers
+
+Some TypeScript exports still use `Orbit*` names (for example `OrbitDevtoolsProvider`, `OrbitTokensRaw`). The **product and npm packages** are `@manovaspace/*`. Prefer documenting the real export name; a rename is tracked separately and is not required for contributions.
+
 ## Questions
 
-Open a [GitHub issue](https://github.com/manovaspace/docs/issues) or the relevant package repo.
+Open a [GitHub issue](https://github.com/manovaspace/docs/issues) or an issue on the package repo.

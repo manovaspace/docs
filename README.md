@@ -3,7 +3,7 @@
 [![CI](https://github.com/manovaspace/docs/actions/workflows/ci.yml/badge.svg)](https://github.com/manovaspace/docs/actions/workflows/ci.yml)
 [![Docs](https://img.shields.io/badge/docs-manovaspace.github.io%2Fdocs-blue)](https://manovaspace.github.io/docs/)
 
-Canonical public documentation for `@manovaspace/*` — utilities and design system packages.
+Canonical public documentation for `@manovaspace/*` — MIT TypeScript libraries (utilities and design system).
 
 **Live site:** [manovaspace.github.io/docs](https://manovaspace.github.io/docs/)
 

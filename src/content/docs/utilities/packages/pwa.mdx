@@ -3,9 +3,7 @@ title: "@manovaspace/pwa"
 description: Serwist and web app manifest helpers for Next.js progressive web apps.
 ---
 
-# @manovaspace/pwa
-
-Serwist and web app manifest helpers for Next.js PWAs — manifest metadata, theme colors, service worker wiring, and a production-only `SerwistShell` provider.
+Helpers for Next.js PWAs: web app manifest metadata, theme colors, Serwist config wrapping, and a production-oriented `SerwistShell` provider.
 
 ## Install
 
@@ -13,7 +11,7 @@ Serwist and web app manifest helpers for Next.js PWAs — manifest metadata, the
 pnpm add @manovaspace/pwa
 ```
 
-Peer dependencies: `next`, `react`, `react-dom`.
+Peers: `next`, `react`, `react-dom`. Also works with npm or yarn.
 
 ## Quick start
 
@@ -21,12 +19,20 @@ Peer dependencies: `next`, `react`, `react-dom`.
 
 ```ts
 import { withSerwist } from "@manovaspace/pwa/next";
-import type { NextConfig } from "next";
 
 export default withSerwist({
   transpilePackages: ["@manovaspace/pwa"],
 });
 ```
+
+**Service worker entry** — point Serwist at the default SW (or your own):
+
+```ts
+// typically wired via withSerwist / serwist config using:
+import "@manovaspace/pwa/sw";
+```
+
+See the package’s `withSerwist` wrapper and your Next.js version’s Serwist docs for the exact `swSrc` / output path your app uses.
 
 **`app/manifest.ts`**
 
@@ -57,11 +63,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 }
 ```
 
+`SerwistShell` is intended for **production** PWA registration patterns — keep offline/SW behavior tested before shipping.
+
 ## Subpath exports
 
 | Import | Purpose |
 | --- | --- |
-| `@manovaspace/pwa` | Manifest + metadata helpers, color types |
+| `@manovaspace/pwa` | Manifest helpers and color types |
 | `@manovaspace/pwa/next` | `withSerwist` Next.js config wrapper |
 | `@manovaspace/pwa/react` | `SerwistShell` client provider |
 | `@manovaspace/pwa/sw` | Default service worker entry |
+
+## Related
+
+- [Utilities overview](/docs/utilities/)
+- [Getting started](/docs/utilities/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/pwa)
+- [Source](https://github.com/manovaspace/ts/tree/main/packages/pwa)
