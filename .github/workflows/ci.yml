@@ -22,7 +22,9 @@ jobs:
         with:
           args: >-
             --verbose --no-progress
+            --base-url https://manovaspace.github.io/docs
             --exclude '^https://github\.com/'
+            --exclude '^https://www\.npmjs\.com/'
             './dist/**/*.html'
           fail: true
         env:
