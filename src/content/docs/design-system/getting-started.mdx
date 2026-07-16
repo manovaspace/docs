@@ -1,0 +1,41 @@
+---
+title: Getting started
+description: Install and use @manovaspace/tokens and @manovaspace/ui in a Next.js app.
+---
+
+# Design system — getting started
+
+## Install
+
+```bash
+npm install @manovaspace/tokens @manovaspace/ui
+```
+
+Peer dependencies: `react` and `react-dom` ^19.2.
+
+## Styles
+
+```css
+@import "@manovaspace/tokens/tokens.css";
+```
+
+```tsx
+import "@manovaspace/ui/styles.css";
+import { Button } from "@manovaspace/ui";
+```
+
+## Storybook
+
+Component gallery runs from the design-system monorepo — see [Storybook](/design-system/storybook/).
+
+## Devtools (development only)
+
+```bash
+npm install -D @manovaspace/devtools
+```
+
+See [devtools](/design-system/packages/devtools/).
+
+## Utility packages
+
+TypeScript utilities (`tsconfig`, `markdown`, `pwa`, `observability`) are in the [utilities section](/utilities/getting-started/).
