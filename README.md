@@ -26,7 +26,9 @@ Built with [Astro Starlight](https://starlight.astro.build/). Content lives in `
 
 ## Deploy
 
-Push to `main` triggers `.github/workflows/deploy.yml` → `gh-pages` branch.
+Push to `main` triggers `.github/workflows/ci.yml` → build + deploy to `gh-pages`.
+
+This repo uses **npm** (not pnpm) — single Starlight app, no workspace packages.
 
 Enable GitHub Pages: Settings → Pages → source `gh-pages` branch.
 
