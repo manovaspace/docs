@@ -1,5 +1,5 @@
 ---
-title: devtools
+title: "@manovaspace/devtools"
 description: Development-only design system toolbar for Next.js apps.
 ---
 
@@ -18,20 +18,41 @@ Requires `@manovaspace/tokens` and `@manovaspace/ui`.
 ## Usage
 
 ```tsx
-import { OrbitDevtools } from "@manovaspace/devtools";
+import {
+  OrbitDevtoolsProvider,
+  DevToolsShell,
+} from "@manovaspace/devtools";
+
+export function Providers({ children }: { children: React.ReactNode }) {
+  return (
+    <OrbitDevtoolsProvider
+      config={{
+        appName: "my-app",
+      }}
+    >
+      <DevToolsShell>{children}</DevToolsShell>
+    </OrbitDevtoolsProvider>
+  );
+}
 ```
 
 ```css
 @import "@manovaspace/devtools/styles.css";
 ```
 
+For production-safe slot registration (zero overhead in prod builds), use `@manovaspace/devtools/slot`:
+
+```tsx
+import { DevtoolsSlot } from "@manovaspace/devtools/slot";
+```
+
 ## Exports
 
 | Import | Purpose |
 | --- | --- |
-| `@manovaspace/devtools` | Main devtools panel |
-| `@manovaspace/devtools/slot` | Slot for toolbar injection |
-| `@manovaspace/devtools/next` | Next.js theme route helper |
+| `@manovaspace/devtools` | `OrbitDevtoolsProvider`, `DevToolsShell`, save helpers |
+| `@manovaspace/devtools/slot` | `DevtoolsSlot` — production-safe stub |
+| `@manovaspace/devtools/next` | Next.js theme route handlers |
 | `@manovaspace/devtools/styles.css` | Devtools stylesheet |
 
 ## Source
