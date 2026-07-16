@@ -25,10 +25,9 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           args: >-
-            --verbose --no-progress
-            --base-url https://manovaspace.github.io/docs
-            --exclude '^https://github\.com/'
-            --exclude '^https://www\.npmjs\.com/'
+            --verbose --no-progress --offline
+            --remap '/docs/(.*) ./dist/$1'
+            --exclude '^https://'
             './dist/**/*.html'
           fail: true
         env:
