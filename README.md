@@ -11,7 +11,7 @@ Public documentation for `@manovaspace/*` — MIT TypeScript libraries for Next.
 
 | Repository | Packages |
 | --- | --- |
-| [manovaspace/ts](https://github.com/manovaspace/ts) | tsconfig, markdown, pwa, observability |
+| [manovaspace/ts](https://github.com/manovaspace/ts) | build, tsconfig, markdown, pwa, observability |
 | [manovaspace/design-system](https://github.com/manovaspace/design-system) | tokens, ui, devtools |
 
 ## Development

@@ -32,6 +32,7 @@ export default defineConfig({
 					items: [
 						{ label: "Overview", slug: "utilities" },
 						{ label: "Getting started", slug: "utilities/getting-started" },
+						{ label: "build", slug: "utilities/packages/build" },
 						{ label: "tsconfig", slug: "utilities/packages/tsconfig" },
 						{ label: "markdown", slug: "utilities/packages/markdown" },
 						{ label: "pwa", slug: "utilities/packages/pwa" },

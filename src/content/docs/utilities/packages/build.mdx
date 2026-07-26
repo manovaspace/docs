@@ -1,0 +1,37 @@
+---
+title: "@manovaspace/build"
+description: Shared tsup config helpers for @manovaspace packages.
+---
+
+Shared [tsup](https://tsup.egoist.dev/) baselines so every `@manovaspace/*` library builds the same way.
+
+## Install
+
+```bash
+pnpm add -D @manovaspace/build tsup
+```
+
+## Helpers
+
+| Export | Use when |
+| --- | --- |
+| `defineLibraryConfig` | Plain ESM libraries (dts, sourcemap, treeshake) |
+| `defineReactLibraryConfig` | React libraries (React marked external) |
+| `defineUnbundledConfig` | Component libraries that keep per-file output (`bundle: false`) |
+
+## Example
+
+```ts
+import { defineReactLibraryConfig } from "@manovaspace/build";
+
+export default defineReactLibraryConfig({
+  entry: ["src/index.ts"],
+  external: ["react-markdown"],
+});
+```
+
+Token CSS / font copy steps stay in package scripts — not in this package.
+
+## License
+
+MIT
