@@ -15,7 +15,7 @@
 | **URL** | `https://manovaspace.github.io/docs/` |
 | **Generator** | Astro Starlight (`base: /docs`) |
 | **Legacy URLs** | `/ts/` and `/design-system/` redirect to `/docs/...` |
-| **Package manager** | **npm** for this repo (single app; no pnpm workspace) |
+| **Package manager** | **npm** for this repo (single app; no bun run workspace) |
 
 ## Rationale
 
