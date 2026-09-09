@@ -1,6 +1,7 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+
 import starlight from "@astrojs/starlight";
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
 	site: "https://manovaspace.github.io",
@@ -8,7 +9,6 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "manovaspace docs",
-			tagline: "MIT TypeScript libraries for Next.js",
 			editLink: {
 				baseUrl: "https://github.com/manovaspace/docs/edit/main/",
 			},
