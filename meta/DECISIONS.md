@@ -15,7 +15,20 @@
 | **URL** | `https://manovaspace.github.io/docs/` |
 | **Generator** | Astro Starlight (`base: /docs`) |
 | **Legacy URLs** | `/ts/` and `/design-system/` redirect to `/docs/...` |
-| **Package manager** | **npm** for this repo (single app; no bun run workspace) |
+| **Package manager** | Historical npm choice; superseded by the current declared Bun toolchain below |
+
+## Current toolchain (verified 2026-10-05)
+
+`package.json` declares `bun@1.4.0` and Node `>=24`; `bun.lock` is committed.
+`.github/workflows/ci.yml` installs Bun 1.4.0, runs a frozen install, then
+`bun run build` (Astro build and check). README, AGENTS and CONTRIBUTING follow
+those actual sources. This remains a single app; using Bun does not require a
+workspace monorepo. Consumer install examples may use other package managers.
+
+Changes use topic branches and PRs. Successful merged `main` builds deploy to
+`gh-pages`; the deployment version is the merged commit SHA. No npm package is
+published by this repository. The site currently configures no extra locales
+and its authored public content is English.
 
 ## Rationale
 

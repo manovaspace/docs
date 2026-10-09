@@ -22,17 +22,17 @@ Thanks for improving `@manovaspace/*` — MIT TypeScript libraries on [npm](http
 ## Development (package repos)
 
 ```bash
-pnpm install
-pnpm build
-pnpm test
-pnpm typecheck
-pnpm lint
+bun install --frozen-lockfile
+bun run build
+bun run test
+bun run typecheck
+bun run lint
 ```
 
 ## Changesets
 
 ```bash
-pnpm changeset
+bun run changeset
 ```
 
 Pick affected packages and the semver bump. Commit `.changeset/*.md` with your PR.
@@ -41,14 +41,24 @@ Releases: [ts RELEASING.md](https://github.com/manovaspace/ts/blob/main/RELEASIN
 
 ## Documentation site
 
-This repo uses **npm** (single Starlight app, no pnpm workspace).
+The package source repos and this single Starlight app declare **Bun 1.4.0**
+and **Node >=24**. Use their committed `bun.lock`; consumer installation examples
+may use another manager.
 
 ```bash
-cd manovaspace/docs   # or: git clone https://github.com/manovaspace/docs.git
-npm install
-npm run dev
-npm run build
+bun install --frozen-lockfile
+bun run dev
+bun run build
 ```
+
+Run commands from the selected checkout. Work on a topic branch and open a PR;
+package code and local API docs share a PR, with a linked site PR for guides.
+Public setup and checks require no private handbook, staff identity or MCP.
+Site CI builds/checks PRs and deploys successful merged `main` builds to
+`gh-pages`. Astro check covers type/content diagnostics; verify edited links
+separately. The site currently has English content with no extra locale configured.
+See [SECURITY.md](https://github.com/manovaspace/docs/blob/main/SECURITY.md) for
+conditional private-report routing; no private-channel availability is assumed.
 
 ## Legacy identifiers
 
