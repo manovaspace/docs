@@ -31,9 +31,9 @@ no additional locales are configured.
 
 ## Deploy
 
-Work on a topic branch and open a PR. CI builds and checks PRs; after merge, the
-`main` push workflow deploys that successful build to the `gh-pages` branch.
-Direct pushes to `main` are forbidden. Deployment authority is the merged commit
+Use a topic branch and open a pull request for contributions. CI builds and
+checks pull requests; after merge, the `main` push workflow deploys that
+successful build to the `gh-pages` branch. Deployment authority is the merged commit
 SHA, not the private root manifest version; this repo does not publish npm packages.
 
 Enable GitHub Pages under **Settings → Pages**, source branch `gh-pages`.
