@@ -40,6 +40,7 @@ export default defineConfig({
 							label: "observability",
 							slug: "utilities/packages/observability",
 						},
+						{ label: "utils", slug: "utilities/packages/utils" },
 					],
 				},
 				{

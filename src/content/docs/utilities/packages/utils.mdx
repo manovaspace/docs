@@ -1,0 +1,91 @@
+---
+title: "@manovaspace/utils"
+description: Standard utilities for Persian and Arabic digits, Iranian Toman currency formatting, and mobile phone normalization.
+---
+
+Standard lightweight utilities for Persian and Iranian localization: digit conversions, Toman currency formatting, and mobile number validation and normalization.
+
+## Install
+
+```bash
+pnpm add @manovaspace/utils
+```
+
+Also works with bun, npm, or yarn. Zero external runtime dependencies.
+
+## Usage
+
+### Digits & Numbers
+
+```ts
+import {
+  toPersianDigits,
+  toLatinDigits,
+  formatLocaleNumber,
+} from "@manovaspace/utils";
+
+// Convert ASCII or Arabic digits to Persian
+toPersianDigits("Order #1234"); // "Order #۱۲۳۴"
+toPersianDigits(42);            // "۴۲"
+
+// Convert Persian/Arabic digits to ASCII digits
+toLatinDigits("۰۹۱۲۳۴۵۶۷۸۹");   // "09123456789"
+toLatinDigits("١٢٣٤٥٦٧٨٩٠");   // "1234567890"
+
+// Format numbers with thousands separators and optional locale
+formatLocaleNumber(1500000);                     // "۱٬۵۰۰٬۰۰۰"
+formatLocaleNumber(1500000, { locale: "en" });   // "1,500,000"
+formatLocaleNumber("1500000", { separator: false }); // "۱۵۰۰۰۰۰"
+```
+
+### Currency (Toman)
+
+```ts
+import { formatToman } from "@manovaspace/utils";
+
+// Default: Persian digits with 'تومان' suffix
+formatToman(50000);     // "۵۰,۰۰۰ تومان"
+formatToman("1200000"); // "۱,۲۰۰,۰۰۰ تومان"
+
+// Custom options
+formatToman(50000, { showUnit: false });                       // "۵۰,۰۰۰"
+formatToman(50000, { showUnit: false, persianDigits: false }); // "50,000"
+```
+
+### Phone Numbers (Iran Mobile)
+
+```ts
+import { normalizeIranMobile, isValidIranMobile } from "@manovaspace/utils";
+
+// Normalize diverse input formats to canonical 09xxxxxxxxx
+normalizeIranMobile("+989123456789");  // "09123456789"
+normalizeIranMobile("00989123456789"); // "09123456789"
+normalizeIranMobile("989123456789");   // "09123456789"
+normalizeIranMobile("9123456789");     // "09123456789"
+normalizeIranMobile("۰۹۱۲۳۴۵۶۷۸۹");   // "09123456789"
+normalizeIranMobile("0912-345-6789");  // "09123456789"
+
+// Validate 11-digit Iranian mobile numbers
+isValidIranMobile("09123456789");   // true
+isValidIranMobile("+989351234567");  // true
+isValidIranMobile("02188888888");   // false (landline)
+isValidIranMobile("12345");         // false
+```
+
+## API
+
+| Export | Signature | Description |
+| --- | --- | --- |
+| `toPersianDigits` | `(input: string \| number \| null \| undefined) => string` | Converts Latin or Arabic digits to Persian digits |
+| `toLatinDigits` | `(input: string \| null \| undefined) => string` | Converts Persian and Arabic digits to ASCII digits |
+| `formatLocaleNumber` | `(value: number \| string, options?: { locale?: "fa" \| "en"; separator?: boolean }) => string` | Formats numbers with localized thousands separators and digits |
+| `formatToman` | `(amount: number \| string, options?: FormatTomanOptions) => string` | Formats amount in Toman with separators and optional unit |
+| `normalizeIranMobile` | `(phone: string \| null \| undefined) => string` | Normalizes Iranian mobile to canonical `09xxxxxxxxx` format |
+| `isValidIranMobile` | `(phone: string \| null \| undefined) => boolean` | Validates whether input is a valid 11-digit Iranian mobile |
+
+## Related
+
+- [Utilities overview](/docs/utilities/)
+- [Getting started](/docs/utilities/getting-started/)
+- [npm](https://www.npmjs.com/package/@manovaspace/utils)
+- [Source](https://github.com/manovaspace/ts/tree/main/packages/utils)

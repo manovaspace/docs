@@ -19,7 +19,7 @@ Peers: `react`, `react-dom`. Also works with npm or yarn.
 import { MarkdownContent } from "@manovaspace/markdown";
 
 export function BlogPost({ source }: { source: string }) {
-  return <MarkdownContent>{source}</MarkdownContent>;
+  return <MarkdownContent content={source} />;
 }
 ```
 
@@ -29,8 +29,8 @@ Works in Server and Client Components.
 
 | Export | Description |
 | --- | --- |
-| `MarkdownContent` | Renders markdown string children with GFM |
-| `MarkdownContentProps` | `{ children: string }` |
+| `MarkdownContent` | Renders markdown content string with GFM |
+| `MarkdownContentProps` | `{ content: string; className?: string }` |
 
 ## Related
 
