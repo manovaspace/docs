@@ -1,3 +1,9 @@
+---
+read_with:
+  - handbook/docs/orbit/decisions/017-open-commons-tier.md
+  - handbook/docs/orbit/guides/open-commons.md
+---
+
 # manovaspace/docs
 
 Public documentation site for `@manovaspace/*` MIT TypeScript libraries.
