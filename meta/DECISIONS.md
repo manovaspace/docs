@@ -25,6 +25,10 @@
 those actual sources. This remains a single app; using Bun does not require a
 workspace monorepo. Consumer install examples may use other package managers.
 
+Update 2026-11-22: the declared toolchain is now `bun@1.4.4` (`ci.yml` and README,
+AGENTS, CONTRIBUTING aligned); Node `>=24` is unchanged. The 2026-10-05 record above
+is kept as history.
+
 Changes use topic branches and PRs. Successful merged `main` builds deploy to
 `gh-pages`; the deployment version is the merged commit SHA. No npm package is
 published by this repository. The site currently configures no extra locales

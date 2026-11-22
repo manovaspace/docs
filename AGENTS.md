@@ -33,7 +33,7 @@ bun run dev
 bun run build
 ```
 
-Use the versions declared in `package.json` (Bun 1.4.0, Node >=24) and `bun.lock`.
+Use the versions declared in `package.json` (Bun 1.4.4, Node >=24) and `bun.lock`.
 CI runs those Bun commands. The current site is English with no extra locales.
 
 ## Editing

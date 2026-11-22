@@ -24,7 +24,7 @@ bun run build    # production build and Astro type/content diagnostics
 
 Built with [Astro Starlight](https://starlight.astro.build/). Content lives in `src/content/docs/`.
 
-This single Starlight app declares **Bun 1.4.0** and **Node >=24** in
+This single Starlight app declares **Bun 1.4.4** and **Node >=24** in
 `package.json`; commit `bun.lock` and use the same manager as CI. Consumer package
 installation examples may use npm, pnpm or yarn. The current site is English;
 no additional locales are configured.
