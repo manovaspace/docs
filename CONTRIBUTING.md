@@ -5,7 +5,7 @@ This repository hosts the English public documentation for
 
 ## Development
 
-Use the declared Bun 1.4.0 and Node >=24 toolchain with committed `bun.lock`:
+Use the declared Bun 1.4.4 and Node >=24 toolchain with committed `bun.lock`:
 
 ```bash
 bun install --frozen-lockfile
